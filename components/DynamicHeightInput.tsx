@@ -9,12 +9,32 @@ import {
 import {StyleProp} from "react-native/Libraries/StyleSheet/StyleSheet";
 import {TextStyle, ViewStyle} from "react-native/Libraries/StyleSheet/StyleSheetTypes";
 
-export type DynamicHeightInputType = TextInputProps & {
+type DynamicHeightInputType = TextInputProps & {
+    /**
+     * 输入框样式
+     */
     inputStyle?: StyleProp<TextStyle> | undefined;
+    /**
+     * 最小高度
+     * @default 40
+     */
     minHeight?: number;
+    /**
+     * 最大高度
+     * @default 155
+     * */
     maxHeight?: number;
+    /**
+     * 输入框前面内容
+     */
     Before?: ReactNode;
+    /**
+     * 输入框后面内容
+     */
     After?: ReactNode;
+    /**
+     * 容器样式
+     */
     style?: StyleProp<ViewStyle> | undefined;
 };
 
